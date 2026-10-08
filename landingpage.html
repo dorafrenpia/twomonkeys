@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Our Story — a digital collection of two monkeys, one love."
+    >
+
+    <title>Our Story — Two Monkeys, One Love</title>
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         CSS
+    ========================================================== -->
+
+    <link rel="stylesheet" href="landingpage.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================================
+         PAGE LOADER
+         Nanti bisa dikontrol JS ketika Firebase selesai loading
+    ========================================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <div class="loader-content">
+
+            <div class="loader-symbol">
+                猴
+            </div>
+
+            <div class="loader-line"></div>
+
+            <p>
+                Our Story
+            </p>
+
+            <span>
+                Loading our memories...
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         NAVBAR
+    ========================================================== -->
+
+    <header class="navbar" id="navbar">
+
+        <a href="#home" class="brand">
+
+            <span class="brand-symbol">
+                猴
+            </span>
+
+            <span class="brand-text">
+                Our Story
+            </span>
+
+        </a>
+
+
+        <nav class="nav-menu">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#story">
+                Our Story
+            </a>
+
+            <a href="#memories">
+                Memories
+            </a>
+
+            <a href="#letter">
+                Love Letter
+            </a>
+
+        </nav>
+
+
+        <a href="#add-memory" class="nav-memory-button">
+            <span>+</span>
+            Memory
+        </a>
+
+    </header>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-background">
+
+                <div class="hero-glow glow-one"></div>
+                <div class="hero-glow glow-two"></div>
+
+                <div class="lantern lantern-left">
+                    <div class="lantern-body">
+                        福
+                    </div>
+                    <div class="lantern-string"></div>
+                </div>
+
+                <div class="lantern lantern-right">
+                    <div class="lantern-body">
+                        囍
+                    </div>
+                    <div class="lantern-string"></div>
+                </div>
+
+            </div>
+
+
+            <div class="hero-content">
+
+                <div class="hero-chinese">
+                    我们的故事
+                </div>
+
+                <div class="hero-zodiac">
+                    猴 · 猴
+                </div>
+
+                <h1>
+                    Two Monkeys,
+                    <span>One Love.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Dua manusia dengan shio yang sama,
+                    dua perjalanan yang berbeda,
+                    sampai akhirnya semesta mempertemukan
+                    kami dalam satu cerita.
+                </p>
+
+
+                <!-- Nanti JS bisa mengambil tanggal hubungan dari Firestore -->
+
+                <div class="relationship-date">
+
+                    <span class="date-line"></span>
+
+                    <span>
+                        Together Since
+                        <strong data-relationship-date>
+                            XXXX
+                        </strong>
+                    </span>
+
+                    <span class="date-line"></span>
+
+                </div>
+
+
+                <a href="#story" class="hero-button">
+
+                    <span>
+                        Discover Our Story
+                    </span>
+
+                    <span class="button-arrow">
+                        ↓
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-bottom">
+
+                <span>
+                    Scroll to continue
+                </span>
+
+                <div class="scroll-line"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ZODIAC
+        ====================================================== -->
+
+        <section class="zodiac-section section">
+
+            <div class="section-heading">
+
+                <span class="section-eyebrow">
+                    A Little Coincidence
+                </span>
+
+                <h2>
+                    Born Under
+                    <em>The Same Sign</em>
+                </h2>
+
+                <div class="gold-divider">
+                    <span></span>
+                    <b>✦</b>
+                    <span></span>
+                </div>
+
+                <p>
+                    Dari begitu banyak manusia di dunia,
+                    ada satu kebetulan kecil yang membuat
+                    cerita ini terasa sedikit lebih spesial.
+                </p>
+
+            </div>
+
+
+            <div class="zodiac-wrapper">
+
+
+                <!-- =================================================
+                     PERSON ONE
+                ================================================== -->
+
+                <article class="zodiac-person">
+
+                    <div class="person-decoration">
+                        猴
+                    </div>
+
+                    <div class="person-photo">
+
+                        <!-- Nanti URL berasal dari Firebase Storage -->
+
+                        <img
+                            src="https://placehold.co/700x850/5c1010/f0d38b?text=Your+Photo"
+                            alt="Foto pertama"
+                            data-profile-photo="person-one"
+                        >
+
+                    </div>
+
+                    <div class="person-info">
+
+                        <span class="person-role">
+                            THE FIRST MONKEY
+                        </span>
+
+                        <h3 data-profile-name="person-one">
+                            Your Name
+                        </h3>
+
+                        <span class="person-zodiac">
+                            猴 · MONKEY
+                        </span>
+
+                        <p data-profile-description="person-one">
+                            Seseorang yang hadir dalam hidupku
+                            dan perlahan membuat hari-hari biasa
+                            menjadi sesuatu yang ingin selalu kuingat.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =================================================
+                     CENTER
+                ================================================== -->
+
+                <div class="zodiac-center">
+
+                    <div class="center-line"></div>
+
+                    <div class="heart-orb">
+                        <span>
+                            ♥
+                        </span>
+                    </div>
+
+                    <div class="center-symbol">
+                        ×
+                    </div>
+
+                    <div class="center-line"></div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PERSON TWO
+                ================================================== -->
+
+                <article class="zodiac-person reverse">
+
+                    <div class="person-decoration">
+                        猴
+                    </div>
+
+                    <div class="person-photo">
+
+                        <img
+                            src="https://placehold.co/700x850/5c1010/f0d38b?text=Her+Photo"
+                            alt="Foto kedua"
+                            data-profile-photo="person-two"
+                        >
+
+                    </div>
+
+                    <div class="person-info">
+
+                        <span class="person-role">
+                            THE SECOND MONKEY
+                        </span>
+
+                        <h3 data-profile-name="person-two">
+                            Her Name
+                        </h3>
+
+                        <span class="person-zodiac">
+                            猴 · MONKEY
+                        </span>
+
+                        <p data-profile-description="person-two">
+                            Seseorang yang awalnya hanya bagian
+                            dari perjalanan hidupku,
+                            sampai akhirnya menjadi bagian
+                            yang tidak ingin kulepaskan.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             STORY
+        ====================================================== -->
+
+        <section class="story-section section" id="story">
+
+            <div class="section-heading">
+
+                <span class="section-eyebrow">
+                    Our Journey
+                </span>
+
+                <h2>
+                    How It All
+                    <em>Began</em>
+                </h2>
+
+                <div class="gold-divider">
+                    <span></span>
+                    <b>✦</b>
+                    <span></span>
+                </div>
+
+                <p>
+                    Karena setiap hubungan mempunyai cerita,
+                    dan setiap cerita mempunyai halaman pertama.
+                </p>
+
+            </div>
+
+
+            <!--
+                Nanti JS bisa membuat timeline secara otomatis
+                berdasarkan data Firestore.
+            -->
+
+            <div class="timeline" id="storyTimeline">
+
+
+                <!-- STORY ITEM -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <span>
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            XXXX · FIRST MEETING
+                        </span>
+
+                        <h3>
+                            The Day We Met
+                        </h3>
+
+                        <p>
+                            Tulis cerita pertama kali kalian bertemu
+                            di sini. Tempat, waktu, suasana,
+                            atau bahkan hal kecil yang saat itu
+                            mungkin terasa biasa.
+                        </p>
+
+                        <span class="timeline-heart">
+                            ♥
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STORY ITEM -->
+
+                <article class="timeline-item timeline-right">
+
+                    <div class="timeline-marker">
+
+                        <span>
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            XXXX · FIRST MEMORY
+                        </span>
+
+                        <h3>
+                            A Small Beginning
+                        </h3>
+
+                        <p>
+                            Tidak semua cerita besar dimulai
+                            dengan sesuatu yang luar biasa.
+                            Kadang hanya percakapan kecil,
+                            candaan sederhana, atau sebuah pesan.
+                        </p>
+
+                        <span class="timeline-heart">
+                            ♥
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STORY ITEM -->
+
+                <article class="timeline-item">
+
+                    <div class="timeline-marker">
+
+                        <span>
+                            03
+                        </span>
+
+                    </div>
+
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            XXXX · THE MOMENT
+                        </span>
+
+                        <h3>
+                            When I Knew
+                        </h3>
+
+                        <p>
+                            Momen ketika seseorang perlahan
+                            berubah dari sekadar orang yang dikenal
+                            menjadi seseorang yang benar-benar berarti.
+                        </p>
+
+                        <span class="timeline-heart">
+                            ♥
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MEMORIES
+        ====================================================== -->
+
+        <section class="memories-section section" id="memories">
+
+            <div class="memories-background">
+
+                <div class="red-glow"></div>
+
+            </div>
+
+
+            <div class="section-heading dark-heading">
+
+                <span class="section-eyebrow">
+                    Captured Moments
+                </span>
+
+                <h2>
+                    Our
+                    <em>Memories</em>
+                </h2>
+
+                <div class="gold-divider">
+                    <span></span>
+                    <b>✦</b>
+                    <span></span>
+                </div>
+
+                <p>
+                    Beberapa momen terlalu berharga
+                    untuk hanya tinggal di galeri handphone.
+                </p>
+
+            </div>
+
+
+            <!--
+                =====================================================
+                FIREBASE MEMORY GRID
+                =====================================================
+
+                Nanti JS akan mengisi #memoryGrid dengan data
+                dari Firestore.
+
+                Struktur setiap memory:
+
+                {
+                    title,
+                    story,
+                    date,
+                    location,
+                    imageUrl
+                }
+            -->
+
+            <div
+                class="memory-grid"
+                id="memoryGrid"
+                data-source="firestore-memories"
+            >
+
+
+                <!-- MEMORY PLACEHOLDER 01 -->
+
+                <article
+                    class="memory-card memory-large"
+                    data-memory-id="preview-001"
+                >
+
+                    <div class="memory-image">
+
+                        <img
+                            src="https://placehold.co/1000x1300/320808/d6aa55?text=Our+Memory"
+                            alt="Our memory"
+                        >
+
+                    </div>
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-date">
+                            XXXX
+                        </span>
+
+                        <h3>
+                            Our Favorite Day
+                        </h3>
+
+                        <p>
+                            A moment worth remembering.
+                        </p>
+
+                        <span class="memory-location">
+                            ♧ Somewhere with you
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY PLACEHOLDER 02 -->
+
+                <article
+                    class="memory-card"
+                    data-memory-id="preview-002"
+                >
+
+                    <div class="memory-image">
+
+                        <img
+                            src="https://placehold.co/900x900/3c0a0a/d6aa55?text=Memory"
+                            alt="Our memory"
+                        >
+
+                    </div>
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-date">
+                            XXXX
+                        </span>
+
+                        <h3>
+                            Just Us
+                        </h3>
+
+                        <p>
+                            Tidak perlu tempat spesial.
+                        </p>
+
+                        <span class="memory-location">
+                            ♧ Somewhere
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY PLACEHOLDER 03 -->
+
+                <article
+                    class="memory-card"
+                    data-memory-id="preview-003"
+                >
+
+                    <div class="memory-image">
+
+                        <img
+                            src="https://placehold.co/900x900/4c0b0b/d6aa55?text=Memory"
+                            alt="Our memory"
+                        >
+
+                    </div>
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-date">
+                            XXXX
+                        </span>
+
+                        <h3>
+                            That Smile
+                        </h3>
+
+                        <p>
+                            Salah satu senyum favoritku.
+                        </p>
+
+                        <span class="memory-location">
+                            ♧ Somewhere
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MEMORY PLACEHOLDER 04 -->
+
+                <article
+                    class="memory-card"
+                    data-memory-id="preview-004"
+                >
+
+                    <div class="memory-image">
+
+                        <img
+                            src="https://placehold.co/900x900/350808/d6aa55?text=Memory"
+                            alt="Our memory"
+                        >
+
+                    </div>
+
+                    <div class="memory-overlay">
+
+                        <span class="memory-date">
+                            XXXX
+                        </span>
+
+                        <h3>
+                            Another Chapter
+                        </h3>
+
+                        <p>
+                            Satu lagi kenangan untuk disimpan.
+                        </p>
+
+                        <span class="memory-location">
+                            ♧ Somewhere
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <div class="memories-more">
+
+                <button
+                    type="button"
+                    class="outline-gold-button"
+                    id="loadMoreMemories"
+                >
+                    <span>
+                        View All Memories
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ADD MEMORY
+        ====================================================== -->
+
+        <section
+            class="add-memory-section section"
+            id="add-memory"
+        >
+
+            <div class="add-memory-wrapper">
+
+
+                <div class="add-memory-heading">
+
+                    <span class="section-eyebrow">
+                        Keep The Story Growing
+                    </span>
+
+                    <h2>
+                        Save Another
+                        <em>Chapter</em>
+                    </h2>
+
+                    <p>
+                        Setiap foto punya cerita.
+                        Setiap cerita punya tempatnya sendiri
+                        di dalam perjalanan kita.
+                    </p>
+
+                </div>
+
+
+                <!--
+                    FORM INI BELUM BERFUNGSI.
+                    Nanti JS + Firebase akan mengurus:
+
+                    1. Upload image
+                    2. Firebase Storage
+                    3. Get downloadURL
+                    4. Save metadata ke Firestore
+                    5. Refresh gallery
+                -->
+
+                <form
+                    class="memory-form"
+                    id="memoryForm"
+                    data-firebase-form="memory"
+                >
+
+
+                    <!-- PHOTO UPLOAD -->
+
+                    <div class="upload-area">
+
+                        <input
+                            type="file"
+                            id="memoryImage"
+                            name="memoryImage"
+                            accept="image/*"
+                            hidden
+                        >
+
+                        <label
+                            for="memoryImage"
+                            class="upload-dropzone"
+                        >
+
+                            <div class="upload-icon">
+                                +
+                            </div>
+
+                            <strong>
+                                Add A Photo
+                            </strong>
+
+                            <span>
+                                JPG, PNG, WEBP
+                            </span>
+
+                            <small>
+                                Maximum size will be handled by Firebase
+                            </small>
+
+                        </label>
+
+                        <div
+                            class="image-preview"
+                            id="imagePreview"
+                            hidden
+                        >
+
+                            <img
+                                src=""
+                                alt="Preview"
+                                id="imagePreviewImage"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORM DETAILS -->
+
+                    <div class="form-fields">
+
+
+                        <div class="form-group">
+
+                            <label for="memoryTitle">
+                                Memory Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="memoryTitle"
+                                name="title"
+                                placeholder="Contoh: Our First Trip"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="memoryDate">
+                                    Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="memoryDate"
+                                    name="date"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="memoryLocation">
+                                    Location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="memoryLocation"
+                                    name="location"
+                                    placeholder="Contoh: Pekanbaru"
+                                    autocomplete="off"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="memoryStory">
+                                Our Story
+                            </label>
+
+                            <textarea
+                                id="memoryStory"
+                                name="story"
+                                rows="7"
+                                placeholder="Ceritakan apa yang terjadi pada hari itu..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-submit">
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                                id="saveMemoryButton"
+                            >
+
+                                <span>
+                                    Save This Memory
+                                </span>
+
+                                <span>
+                                    ♥
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LOVE LETTER
+        ====================================================== -->
+
+        <section
+            class="letter-section section"
+            id="letter"
+        >
+
+            <div class="letter-container">
+
+                <div class="letter-decoration left">
+                    囍
+                </div>
+
+                <div class="letter-decoration right">
+                    囍
+                </div>
+
+
+                <div class="letter-top">
+                    一封信
+                </div>
+
+                <span class="letter-small-title">
+                    A Letter For You
+                </span>
+
+
+                <h2>
+                    To My
+                    <em>Favorite Person</em>
+                </h2>
+
+
+                <div class="letter-divider">
+                    ✦
+                </div>
+
+
+                <div
+                    class="love-letter-content"
+                    data-love-letter
+                >
+
+                    <p>
+                        Aku tidak tahu bagaimana cerita kita
+                        akan berjalan sampai halaman terakhir.
+                    </p>
+
+                    <p>
+                        Tapi kalau aku boleh memilih,
+                        aku ingin terus menulisnya bersamamu.
+                    </p>
+
+                    <p>
+                        Dari semua kebetulan yang pernah terjadi,
+                        salah satu yang paling kusyukuri adalah
+                        kebetulan bahwa kita saling menemukan.
+                    </p>
+
+                    <p>
+                        Dua orang.
+                        Dua kehidupan.
+                        Satu cerita yang sama.
+                    </p>
+
+                </div>
+
+
+                <div class="letter-signature">
+
+                    With Love,
+
+                    <strong>
+                        Your Monkey ♥
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOREVER
+        ====================================================== -->
+
+        <section
+            class="forever-section"
+            id="forever"
+        >
+
+            <div class="forever-content">
+
+                <span class="forever-symbol">
+                    猴
+                </span>
+
+                <span class="section-eyebrow">
+                    Maybe It Wasn't A Coincidence
+                </span>
+
+                <h2>
+                    Two Lives.
+                    <br>
+                    <em>One Story.</em>
+                </h2>
+
+                <p>
+                    Di antara begitu banyak manusia di dunia,
+                    kita lahir di bawah shio yang sama,
+                    bertemu di waktu yang mungkin tidak sempurna,
+                    lalu memilih untuk tetap berjalan bersama.
+                </p>
+
+                <div class="forever-divider">
+                    <span></span>
+                    ♥
+                    <span></span>
+                </div>
+
+                <strong>
+                    Our story continues...
+                </strong>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         MEMORY MODAL
+         Nanti digunakan JS untuk detail memory
+    ========================================================== -->
+
+    <div
+        class="memory-modal"
+        id="memoryModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-container">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeMemoryModal"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-image">
+
+                <img
+                    src=""
+                    alt=""
+                    id="modalMemoryImage"
+                >
+
+            </div>
+
+
+            <div class="modal-content">
+
+                <span
+                    class="modal-date"
+                    id="modalMemoryDate"
+                >
+                    XXXX
+                </span>
+
+                <h2 id="modalMemoryTitle">
+                    Memory Title
+                </h2>
+
+                <span
+                    class="modal-location"
+                    id="modalMemoryLocation"
+                >
+                    ♧ Location
+                </span>
+
+                <p id="modalMemoryStory">
+                    Memory story...
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-symbol">
+            猴 · 猴
+        </div>
+
+        <p>
+            Made with
+            <span>♥</span>
+            for two monkeys.
+        </p>
+
+        <small>
+            我们一直在一起
+        </small>
+
+    </footer>
+<script type="module" src="/app.js"></script>
+
+</body>
+</html>
